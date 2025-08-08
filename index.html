@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>個人簡介 | 和風ポートフォリオ</title>
+    <meta name="description" content="極簡日系風格的個人簡介網站。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="./assets/hanko.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳至主要內容</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="主選單">
+        <a href="#home" class="logo" aria-label="首頁">
+          <span class="logo-kanji">和</span>
+          <span class="logo-text">Portfolio</span>
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">選單</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#about">自我介紹</a></li>
+          <li><a href="#skills">技能</a></li>
+          <li><a href="#works">作品</a></li>
+          <li><a href="#contact">聯絡</a></li>
+        </ul>
+      </nav>
+
+      <section id="home" class="hero container">
+        <div class="hero-text" data-reveal>
+          <p class="kicker">自己紹介</p>
+          <h1 class="hero-title">你的名字</h1>
+          <p class="hero-subtitle">前端開發者 · 介面設計 · 生活攝影</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#about">認識我</a>
+            <a class="btn ghost" href="#works">看作品</a>
+          </div>
+        </div>
+        <img class="hanko" src="./assets/hanko.svg" alt="個人印章" />
+        <div class="seigaiha" aria-hidden="true"></div>
+      </section>
+    </header>
+
+    <main id="main">
+      <section id="about" class="section container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">自我介紹 <span class="jp">自己紹介</span></h2>
+          <p class="section-desc">我專注於打造質感、易用的網頁體驗，以清爽與細節見長。喜歡以研究驅動設計與開發，並將日常觀察融入作品之中。</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card" data-reveal>
+            <h3>我在做什麼</h3>
+            <p>前端工程與設計雙棲，注重排版、互動速度與可維護性。熟悉 React、生態系工具與設計系統建置。</p>
+          </div>
+          <div class="about-card" data-reveal>
+            <h3>風格偏好</h3>
+            <p>極簡、留白、講究層次的日系視覺，點綴以朱色印章與傳統圖樣，讓整體識別更鮮明。</p>
+          </div>
+          <div class="about-card" data-reveal>
+            <h3>價值觀</h3>
+            <p>以使用者為中心，重視可及性與內容品質，追求細節與穩定交付。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">技能 <span class="jp">技術</span></h2>
+          <p class="section-desc">挑選幾項代表性技能，呈現深度與廣度。</p>
+        </div>
+        <ul class="chip-list" aria-label="技能列表">
+          <li class="chip" data-reveal>HTML / CSS / 現代語法</li>
+          <li class="chip" data-reveal>JavaScript / TypeScript</li>
+          <li class="chip" data-reveal>React / Next.js</li>
+          <li class="chip" data-reveal>設計系統 / Storybook</li>
+          <li class="chip" data-reveal>無障礙 / 可用性測試</li>
+          <li class="chip" data-reveal>性能最佳化</li>
+        </ul>
+      </section>
+
+      <section id="works" class="section container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">作品 <span class="jp">制作</span></h2>
+          <p class="section-desc">以下是幾個示例卡片；替換為你的實際專案連結與描述即可。</p>
+        </div>
+        <div class="card-grid">
+          <article class="card" data-reveal>
+            <div class="card-media" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3 class="card-title">作品標題 A</h3>
+              <p class="card-desc">簡短描述，說明你的角色、目標與成果。</p>
+              <a class="card-link" href="#" aria-label="查看 作品標題 A">前往</a>
+            </div>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card-media" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3 class="card-title">作品標題 B</h3>
+              <p class="card-desc">簡短描述，說明你的角色、目標與成果。</p>
+              <a class="card-link" href="#" aria-label="查看 作品標題 B">前往</a>
+            </div>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card-media" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3 class="card-title">作品標題 C</h3>
+              <p class="card-desc">簡短描述，說明你的角色、目標與成果。</p>
+              <a class="card-link" href="#" aria-label="查看 作品標題 C">前往</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">聯絡 <span class="jp">連絡先</span></h2>
+          <p class="section-desc">歡迎來信或加上社群，聊聊合作與想法。</p>
+        </div>
+        <div class="contact-actions" data-reveal>
+          <a class="btn primary" href="mailto:you@example.com">Email</a>
+          <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> 你的名字 · 和風ポートフォリオ</p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>

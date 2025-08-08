@@ -1,0 +1,117 @@
+/* Color tokens */
+:root {
+  --color-paper: #f8f5ee;
+  --color-ink: #1c1917;
+  --color-vermillion: #e1462c;
+  --color-accent: #0f172a;
+  --color-muted: #6b7280;
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.08);
+  --radius: 14px;
+}
+
+/* Reset & base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+
+.container { width: min(1100px, 92%); margin-inline: auto; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0; background: #fff; color: #000; padding: 8px 12px; z-index: 1000;
+}
+.skip-link:focus { left: 12px; box-shadow: var(--shadow-soft); border-radius: 8px; }
+
+/* Typography */
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.logo-kanji { font-family: "Noto Serif JP", serif; font-weight: 700; font-size: 24px; color: var(--color-vermillion); }
+.logo-text { font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 14px; }
+
+.kicker { letter-spacing: 0.28em; text-transform: uppercase; color: var(--color-muted); font-size: 12px; }
+.hero-title { font-family: "Noto Serif JP", serif; font-size: clamp(36px, 7vw, 72px); line-height: 1.1; margin: 6px 0 8px; }
+.hero-subtitle { color: var(--color-muted); font-size: clamp(14px, 2.5vw, 18px); }
+
+.section { padding: 72px 0; }
+.section-title { font-family: "Noto Serif JP", serif; font-size: clamp(24px, 3.5vw, 36px); margin: 0; display: flex; align-items: baseline; gap: 12px; }
+.section-title .jp { color: var(--color-vermillion); font-size: 16px; letter-spacing: 0.18em; }
+.section-desc { color: var(--color-muted); max-width: 62ch; }
+
+/* Nav */
+.site-header { position: relative; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; position: sticky; top: 0; background: rgba(248,245,238,0.7); backdrop-filter: saturate(140%) blur(8px); z-index: 40; }
+.nav-menu { display: flex; list-style: none; gap: 22px; margin: 0; padding: 0; }
+.nav-menu a { text-decoration: none; color: inherit; font-weight: 600; position: relative; }
+.nav-menu a::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: var(--color-vermillion); transition: width .25s ease; }
+.nav-menu a:hover::after { width: 100%; }
+
+.nav-toggle { display: none; border: 1px solid #d4d4d4; background: #fff; padding: 8px 10px; border-radius: 10px; }
+
+@media (max-width: 800px) {
+  .nav-toggle { display: inline-block; }
+  .nav-menu { position: absolute; right: 4%; top: 64px; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: var(--shadow-soft); padding: 12px; display: none; flex-direction: column; min-width: 180px; }
+  .nav-menu.show { display: flex; }
+}
+
+/* Hero */
+.hero { position: relative; display: grid; grid-template-columns: 1fr; gap: 18px; padding: 64px 0 32px; }
+.hero-cta { display: flex; gap: 12px; margin-top: 18px; }
+
+.hanko { position: absolute; right: 2%; top: 18px; width: 64px; height: 64px; opacity: .95; filter: drop-shadow(0 6px 20px rgba(0,0,0,.12)); mix-blend-mode: multiply; }
+
+.seigaiha { position: absolute; inset-inline: 0; bottom: -1px; height: 120px; background: url('./assets/pattern-seigaiha.svg'); opacity: .25; mask-image: linear-gradient(to top, black, transparent 70%); -webkit-mask-image: linear-gradient(to top, black, transparent 70%); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 10px 16px; border-radius: 999px; font-weight: 700; transition: transform .06s ease, box-shadow .2s ease, background .2s ease; border: 1px solid transparent; }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--color-vermillion); color: #fff; box-shadow: 0 8px 24px rgba(225,70,44,.25); }
+.btn.primary:hover { background: #d13d27; }
+.btn.ghost { background: transparent; color: var(--color-ink); border-color: #e5e7eb; }
+.btn.ghost:hover { background: #ffffffb3; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
+.about-card { background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-soft); }
+.about-card h3 { margin: 0 0 8px; font-family: "Noto Serif JP", serif; }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* Skills */
+.chip-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 22px 0 0; }
+.chip { background: #fff; border: 1px solid #e5e7eb; border-radius: 999px; padding: 10px 14px; box-shadow: var(--shadow-soft); font-weight: 600; }
+
+/* Works */
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
+.card { display: grid; grid-template-rows: 160px auto; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
+.card-media { background: url('./assets/pattern-seigaiha.svg'); opacity: .45; }
+.card-body { padding: 16px; display: grid; gap: 8px; }
+.card-title { margin: 0; font-family: "Noto Serif JP", serif; }
+.card-desc { color: var(--color-muted); margin: 0; }
+.card-link { justify-self: start; text-decoration: none; color: var(--color-vermillion); font-weight: 700; }
+.card-link:hover { text-decoration: underline; }
+
+@media (max-width: 1000px) {
+  .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+/* Contact */
+.contact-actions { display: flex; gap: 12px; }
+
+/* Footer */
+.site-footer { padding: 40px 0 60px; color: var(--color-muted); text-align: center; }
+
+/* Reveal on scroll */
+[data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+[data-reveal].is-visible { opacity: 1; transform: translateY(0); }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      .wave { fill: none; stroke: #0f172a; stroke-opacity: .35; stroke-width: 1.25; }
+    </style>
+  </defs>
+  <!-- Tile draws arcs that will tessellate as seigaiha -->
+  <g>
+    <path class="wave" d="M0,32a32,32 0 0 1 64,0"/>
+    <path class="wave" d="M8,32a24,24 0 0 1 48,0"/>
+    <path class="wave" d="M16,32a16,16 0 0 1 32,0"/>
+    <path class="wave" d="M24,32a8,8 0 0 1 16,0"/>
+
+    <path class="wave" d="M0,64a32,32 0 0 1 64,0"/>
+    <path class="wave" d="M8,64a24,24 0 0 1 48,0"/>
+    <path class="wave" d="M16,64a16,16 0 0 1 32,0"/>
+    <path class="wave" d="M24,64a8,8 0 0 1 16,0"/>
+  </g>
+</svg>

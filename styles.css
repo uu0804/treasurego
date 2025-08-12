@@ -1,0 +1,126 @@
+:root{
+  --bg:#f0f6f8;
+  --surface:#ffffff;
+  --teal:#1f9ca4;
+  --teal-700:#167e85;
+  --blue:#2a92e1;
+  --blue-700:#2a6fd1;
+  --gray-700:#2e3a45;
+  --gray-500:#6b7785;
+  --muted:#e7eef3;
+  --border:#d8e3ea;
+  --shadow: 0 2px 4px rgba(18,44,59,.08), 0 8px 24px rgba(18,44,59,.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Noto Sans TC', system-ui, -apple-system, Segoe UI, Roboto, Arial, "Microsoft JhengHei", sans-serif;
+  color:var(--gray-700);
+  background:var(--bg);
+}
+
+.container{width:min(1200px, 94%); margin-inline:auto}
+
+/* Header */
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0;
+}
+.brand{display:flex; align-items:center; gap:12px}
+.brand-mark{width:42px; height:42px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #fff 0 14px, #2a92e1 15px 23px, #1f9ca4 24px 42px); box-shadow:inset 0 0 0 2px #e0edf3}
+.brand-title{font-weight:700; font-size:18px}
+.brand-subtitle{font-size:12px; color:var(--gray-500)}
+
+.main-nav ul{display:flex; gap:16px; list-style:none; padding:0; margin:0; flex-wrap:wrap}
+.main-nav a{
+  display:inline-block; padding:10px 12px; border-radius:6px; color:#0f3a4a; text-decoration:none; font-weight:600; background:linear-gradient(#f8fbfd,#eef5f9);
+  border:1px solid #d7e6ef;
+}
+.main-nav a:hover{background:#eaf4fa}
+
+/* Panels */
+.panel{background:var(--surface); border:1px solid var(--border); border-radius:10px; box-shadow:var(--shadow); overflow:hidden}
+.panel + .panel{margin-top:0}
+.panel-header{display:flex; align-items:center; gap:10px; padding:10px 14px; background:linear-gradient(180deg,#f6fbfe,#e8f2f8); border-bottom:1px solid var(--border)}
+.panel-title{margin:0; font-size:16px}
+.panel-icon{font-size:18px}
+
+.grid-row{display:grid; gap:16px; margin:16px 0}
+.top-row{grid-template-columns: 320px 1fr}
+.middle-row{grid-template-columns: 320px 1fr 1fr}
+
+/* Calendar */
+.calendar-panel{min-height:320px}
+.calendar-controls{display:grid; grid-template-columns: 36px 1fr 36px; align-items:center; padding:10px 12px; gap:8px}
+.icon-btn{height:32px; border:1px solid var(--border); background:#fff; border-radius:8px; cursor:pointer}
+.icon-btn:hover{background:#f3f7fa}
+.calendar-month{font-weight:700; text-align:center}
+.calendar{width:100%; border-collapse:separate; border-spacing:2px; padding:8px 10px}
+.calendar th{font-weight:700; color:#59707f; padding:6px 0}
+.calendar td{width:40px; height:34px; text-align:center; border-radius:8px; background:#f2f7fa; color:#143a4a}
+.calendar td.muted{color:#9aa9b5; background:#f7fbfe}
+.calendar td.today{background:#2a92e1; color:#fff; font-weight:700}
+
+/* Hero */
+.hero-panel{display:flex; flex-direction:column}
+.hero-visual{position:relative; height:320px; background:linear-gradient(120deg,#dff3f2 0%, #e1eef8 40%, #cde7f9 100%);}
+.hero-art{position:absolute; inset:0; background:
+  radial-gradient( circle at 20% 70%, #2b9448 0 120px, transparent 121px ),
+  radial-gradient( circle at 45% 40%, #1f9ca4 0 100px, transparent 101px ),
+  radial-gradient( circle at 80% 60%, #2a92e1 0 130px, transparent 131px );
+  opacity:.35;
+}
+.hero-slogans{position:absolute; right:22px; top:30px; display:flex; flex-direction:column; gap:10px; width:320px}
+.hero-slogans > div{background:linear-gradient(180deg,#7a1e18,#4d0f0b); color:#fff; padding:10px 14px; border-radius:6px; box-shadow:0 4px 0 rgba(0,0,0,.25); font-weight:700; letter-spacing:.5px}
+.hero-dots{display:flex; gap:8px; justify-content:center; padding:10px}
+.dot{width:10px; height:10px; border-radius:50%; border:2px solid #32677a; background:#e5f2f7}
+.dot.is-active{background:#2a92e1; border-color:#2a92e1}
+
+/* Lists */
+.list{list-style:none; margin:0; padding:8px 12px}
+.list li{padding:10px 0; border-bottom:1px dashed #dce7ee}
+.list li:last-child{border-bottom:none}
+.list a{color:#113a4a; text-decoration:none}
+.list a:hover{text-decoration:underline}
+.meta{font-size:12px; color:#7a8a96; margin-bottom:4px}
+
+/* Checklist */
+.checklist{list-style:none; margin:0; padding:12px; display:grid; gap:10px}
+.checklist li{padding-left:26px; position:relative}
+.checklist li::before{content:"✓"; position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:4px; background:#e8f5ef; color:#1d8a5a; display:grid; place-items:center; font-weight:700}
+
+.panel-actions{display:flex; justify-content:flex-end; padding:10px 12px; border-top:1px solid var(--border)}
+.btn{display:inline-block; padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:700}
+.btn.ghost{border:1px solid #cfe0ea; color:#2a6fd1; background:#f6fbff}
+.btn.ghost:hover{background:#e8f3ff}
+
+/* Quicklinks */
+.quicklinks-panel{margin:16px 0}
+.quicklinks-grid{display:grid; grid-template-columns: repeat(6, 1fr); gap:10px; padding:12px}
+.ql{display:flex; align-items:center; gap:8px; padding:10px; border:1px solid #cfe0ea; background:linear-gradient(#f8fbff, #eef5fb); border-radius:8px; color:#0f3a4a; text-decoration:none; font-weight:600}
+.ql::before{content:"☑"; color:#2a6fd1}
+.ql:hover{background:#eaf4ff}
+
+/* Footer */
+.site-footer{margin-top:24px; background:#0f2f3c; color:#c8d7df}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; padding:18px 0}
+.badge{border:1px solid #5aa6bc; color:#9ad2e5; padding:6px 10px; border-radius:999px}
+
+/* Responsive */
+@media (max-width: 1080px){
+  .top-row{grid-template-columns: 1fr}
+  .middle-row{grid-template-columns: 1fr}
+  .hero-visual{height:260px}
+  .quicklinks-grid{grid-template-columns: repeat(3, 1fr)}
+}
+@media (max-width: 640px){
+  .main-nav ul{gap:8px}
+  .quicklinks-grid{grid-template-columns: repeat(2, 1fr)}
+}

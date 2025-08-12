@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>天然氣事業部 - 首頁樣板</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <div class="brand-title">天然氣事業部</div>
+            <div class="brand-subtitle">Natural Gas Division</div>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="主選單">
+          <ul>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+            <li><a href="#">選單項目</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main container">
+      <section class="grid-row top-row" aria-label="上方區塊">
+        <div class="panel calendar-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true">📅</span>
+            <h2 class="panel-title">行事曆</h2>
+          </div>
+          <div class="calendar-controls">
+            <button class="icon-btn" id="cal-prev" aria-label="前一月">❮</button>
+            <div class="calendar-month" id="cal-month">2023年 10月</div>
+            <button class="icon-btn" id="cal-next" aria-label="下一月">❯</button>
+          </div>
+          <table class="calendar" aria-label="月曆">
+            <thead>
+              <tr>
+                <th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th>
+              </tr>
+            </thead>
+            <tbody id="calendar-body">
+              <!-- 動態產生 -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel hero-panel">
+          <div class="hero-visual" role="img" aria-label="宣導橫幅">
+            <div class="hero-art"></div>
+            <div class="hero-slogans">
+              <div>申請各項房 一片土地</div>
+              <div>守護家域保育動植物</div>
+              <div>一起發現 中油的綠之美</div>
+              <div>為無毒平衡提供地球的成果</div>
+            </div>
+          </div>
+          <div class="hero-dots" role="tablist" aria-label="輪播控制">
+            <button class="dot is-active" aria-label="第1張" aria-selected="true"></button>
+            <button class="dot" aria-label="第2張"></button>
+            <button class="dot" aria-label="第3張"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-row middle-row" aria-label="中段資訊">
+        <div class="panel link-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true">🔗</span>
+            <h2 class="panel-title">相關連結</h2>
+          </div>
+          <ul class="checklist">
+            <li>活動報名平台</li>
+            <li>內部訊息公告</li>
+            <li>公司政策手冊</li>
+            <li>內部訊問中心</li>
+            <li>內部技術文件</li>
+            <li>財務報表系統</li>
+            <li>IT服務台</li>
+            <li>產業標準規範</li>
+            <li>公司採購手冊</li>
+            <li>總維護組日誌</li>
+          </ul>
+        </div>
+
+        <div class="panel news-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true">📰</span>
+            <h2 class="panel-title">最新消息</h2>
+          </div>
+          <ul class="list news-list">
+            <li>
+              <div class="meta">2025-08-30｜資訊組</div>
+              <a href="#">[公司名稱] 任命 [姓名] 為新任資產管理官，自8月15日起正式上任，請同仁留意。</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-29｜資訊組</div>
+              <a href="#">公告：9月將進行能源大樓外牆清洗，請同仁配合相關作業時間。</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-28｜資訊組</div>
+              <a href="#">恭喜本處獲得「能源教育貢獻獎」，感謝所有同仁的努力！</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-26｜技術組</div>
+              <a href="#">技術升級完成：流程監控系統升級上線，請參考操作手冊。</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-20｜人資處</div>
+              <a href="#">環境管理制度通過 ISO 14001 驗證，持續精進永續經營。</a>
+            </li>
+          </ul>
+          <div class="panel-actions">
+            <a class="btn ghost" href="#">More</a>
+          </div>
+        </div>
+
+        <div class="panel bulletin-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true">📣</span>
+            <h2 class="panel-title">公告欄</h2>
+          </div>
+          <ul class="list bulletin-list">
+            <li>
+              <div class="meta">2025-08-30｜設備組</div>
+              <a href="#">設備維護通知：9月15日進行停機保養，請提前完成資料備份。</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-30｜總務</div>
+              <a href="#">安全演練說明會：全體同仁8月20日參與，請準時到場。</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-29｜資訊組</div>
+              <a href="#">新版表單系統將於月底上線，請完成權限申請。</a>
+            </li>
+            <li>
+              <div class="meta">2025-08-27｜人資處</div>
+              <a href="#">即日起至9月15日受理年度評核意見回饋，逾期不候。</a>
+            </li>
+            <li>
+              <div class="meta">2025-07-30｜人資處</div>
+              <a href="#">現職人員職安衛訓練線上課程已開放報名。</a>
+            </li>
+          </ul>
+          <div class="panel-actions">
+            <a class="btn ghost" href="#">More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel quicklinks-panel" aria-label="常用連結">
+        <div class="panel-header">
+          <span class="panel-icon" aria-hidden="true">🧭</span>
+          <h2 class="panel-title">常用連結</h2>
+        </div>
+        <div class="quicklinks-grid">
+          <a class="ql" href="#"><span>員工入口網站</span></a>
+          <a class="ql" href="#"><span>能源管理系統</span></a>
+          <a class="ql" href="#"><span>環境公告指引</span></a>
+          <a class="ql" href="#"><span>緊急應變計畫</span></a>
+          <a class="ql" href="#"><span>人力資源系統</span></a>
+          <a class="ql" href="#"><span>內部協助中心</span></a>
+          <a class="ql" href="#"><span>財務稽核系統</span></a>
+          <a class="ql" href="#"><span>員工意見箱</span></a>
+          <a class="ql" href="#"><span>安全管理平台</span></a>
+          <a class="ql" href="#"><span>總維護組日誌</span></a>
+          <a class="ql" href="#"><span>內部論壇</span></a>
+          <a class="ql" href="#"><span>IT服務台</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div>台灣中油股份有限公司 版權所有</div>
+          <div>本網站最佳瀏覽於 IE10以上、Firefox 與 Chrome，最佳解析度 1024x768 以上</div>
+        </div>
+        <div class="footer-right">
+          <div class="badge">資安合規</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
